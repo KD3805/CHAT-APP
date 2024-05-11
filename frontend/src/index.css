@@ -4,7 +4,7 @@
 @tailwind utilities;
 
 body {
-	background: url("assets/bg1.jpg");
+	background: url("https://res.cloudinary.com/deq0hxr3t/image/upload/v1715419605/login-bg_xg4d6h.png");
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;

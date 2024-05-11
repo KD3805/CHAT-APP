@@ -4,15 +4,15 @@
 @tailwind utilities;
 
 body {
-  background: url("assets/bg1.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+	background: url("assets/bg1.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
 
-  font-family: "Baloo 2", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+	font-family: "Baloo 2", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 html {
@@ -20,15 +20,15 @@ html {
 }
 
 .text-theme {
-  color: #00e67a !important;
+	color: #00e67a !important;
 }
 
 .bg-theme {
-  background-color: #00e67a !important;
+	background-color: #00e67a !important;
 }
 
 .hover-text-theme:hover {
-    color: #00e67a !important;
+	color: #00e67a !important;
 }
 
 /* dark mode looking scrollbar */
@@ -58,6 +58,7 @@ html {
 }
 
 @keyframes shake {
+
 	10%,
 	90% {
 		transform: translate3d(-1px, 0, 0);
@@ -77,5 +78,62 @@ html {
 	40%,
 	60% {
 		transform: translate3d(4px, 0, 0);
+	}
+}
+
+.users-name {
+	display: inline-block;
+	width: 80px;
+	white-space: nowrap;
+	overflow: hidden !important;
+	text-overflow: ellipsis;
+}
+
+.right--300 {
+	right: -300px;
+}
+
+.right-0 {
+	right: 0;
+}
+
+.sidebar-head,
+.open-sidebar-btn,
+.close-sidebar-btn {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.main {
+		padding: 0;
+	}
+
+	.home {
+		width: 100vw;
+		flex-direction: column;
+	}
+
+	.links-container {
+		width: 275px;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 50;
+		background-color: #1e2431;
+		backdrop-filter: blur(300px);
+		transition: all 0.3s ease-in;
+	}
+
+	.sidebar-head {
+		display: flex;	
+	}
+
+	.close-sidebar-btn {
+		display: block;
+		margin: 10px 15px;
+	}
+
+	.open-sidebar-btn {
+		display: inline-block;
 	}
 }

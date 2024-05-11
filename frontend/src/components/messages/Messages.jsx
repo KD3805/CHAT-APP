@@ -2,10 +2,12 @@ import { useEffect, useRef } from "react";
 import useGetMessages from "../../hooks/useGetMessages";
 import MessageSkeleton from "../skeletons/MessageSkeleton";
 import Message from "./Message";
+import useListenMessages from "../../hooks/useListenMessages";
 
 const Messages = () => {
 	const { loading, messages } = useGetMessages();
 	const lastMessageRef = useRef();
+	useListenMessages(); // Listen for any new message 
 
 	useEffect(() => {
 		setTimeout(() => {
@@ -14,7 +16,7 @@ const Messages = () => {
 	}, [messages]);
 
 	return (
-		<div className='px-4 flex-1 overflow-auto'>
+		<div className='px-4 py-2 flex-1 overflow-auto lg:h-[480px] md:h-[480px] h-[82vh]'>
 			{!loading &&
 				messages.length > 0 &&
 				messages.map((message) => (

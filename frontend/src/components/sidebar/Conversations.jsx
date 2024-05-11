@@ -6,9 +6,9 @@ const Conversations = () => {
 	const { loading, conversations } = useGetConversation();
 
 	return (
-		<div className='py-2 flex flex-col overflow-auto'>
+		<div className='lg:py-2 md:py-2 p-0 mb-2 flex flex-col overflow-auto'>
 			{conversations.map((conversation, idx) => (
-				<Conversation 
+				<Conversation
 					key={conversation._id}
 					conversation={conversation}
 					emoji={getRandomEmoji()}
